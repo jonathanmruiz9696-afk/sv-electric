@@ -1,0 +1,424 @@
+/* PresupuestoApp.css */
+/* Estilos para los Logos */
+/* Logo en la Barra de Navegación superior */
+.navbar-logo {
+  height: 48px;            /* Aumentado de 36px a 48px */
+  max-width: 180px;        /* Límite de ancho para no deformar el navbar */
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Logo en el Encabezado de la Hoja PDF */
+.pdf-logo {
+  height: 80px;            /* Aumentado de 52px a 80px */
+  max-width: 150px;        /* Permite que el logo horizontal destaque bien */
+  width: auto;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 6px;
+}
+/* Reset base y contenedores principales */
+.app-container {
+  max-width: 480px;
+  margin: 0 auto;
+  background-color: #f1f5f9;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #04448C;
+  padding-bottom: 90px;
+  box-sizing: border-box;
+}
+
+/* Navbar top */
+.app-navbar {
+  background-color: #04448C;
+  color: #ffffff;
+  padding: 12px 16px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.brand-title {
+  font-weight: 700;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tab-switcher {
+  background-color: rgba(12, 74, 110, 0.6);
+  padding: 4px;
+  border-radius: 8px;
+  display: flex;
+  gap: 4px;
+}
+
+.tab-btn {
+  border: none;
+  background: transparent;
+  color: #bae6fd;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.tab-btn.active {
+  background-color: #ffffff;
+  color: #0c4a6e;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Formularios */
+.form-section {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.card-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: #04448C;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.field-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+.input-field, .textarea-field {
+  width: 100%;
+  font-size: 12px;
+  padding: 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.input-field:focus, .textarea-field:focus {
+  border-color: #0284c7;
+}
+
+/* Atajos */
+.shortcuts-scroll {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.btn-shortcut {
+  background-color: #f0f9ff;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 8px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* Ítems lista */
+.item-box {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px;
+  position: relative;
+  margin-bottom: 8px;
+}
+
+.btn-delete {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  color: #f43f5e;
+  cursor: pointer;
+}
+
+.btn-add {
+  background-color: #059669;
+  color: #ffffff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Botón flotante */
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(4px);
+  border-top: 1px solid #e2e8f0;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: center;
+  z-index: 40;
+}
+
+.btn-main {
+  width: 100%;
+  max-width: 440px;
+  background-color: #0284c7;
+  color: #ffffff;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-download {
+  background-color: #059669;
+}
+
+/* ========================================== */
+/* PLANTILLA PDF (A4 ESTÁTICA SIN TAILWIND)    */
+/* ========================================== */
+
+.pdf-preview-wrapper {
+  padding: 12px;
+}
+
+.pdf-page {
+  background-color: #ffffff;
+  padding: 24px;
+  color: #1e293b;
+  font-size: 12px;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
+
+.pdf-header {
+  border-bottom: 2px solid #04448C;
+  padding-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.pdf-company-name {
+  font-size: 18px;
+  font-weight: 800;
+  color: #0c4a6e;
+  margin: 0;
+}
+
+.pdf-subtitle {
+  font-size: 11px;
+  font-weight: 700;
+  color: #475569;
+  margin: 2px 0 0 0;
+}
+
+.pdf-client-box {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 10px;
+  border-radius: 6px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 16px;
+  font-size: 11px;
+}
+
+.pdf-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.pdf-table th {
+  background-color: #04448C;
+  color: #ffffff;
+  text-align: left;
+  padding: 6px 8px;
+  font-weight: 700;
+}
+
+.pdf-table td {
+  padding: 8px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.pdf-table tr:nth-child(even) {
+  background-color: #f8fafc;
+}
+
+.pdf-footer {
+  border-top: 2px solid #1e293b;
+  padding-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 16px;
+}
+
+.pdf-total-amount {
+  font-size: 18px;
+  font-weight: 900;
+  color: #0c4a6e;
+}
+
+/* Regla especial para Impresión nativa */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #hoja-presupuesto, #hoja-presupuesto * {
+    visibility: visible;
+  }
+  /* Contenedor A4 fijo para html2pdf / HTML2Canvas */
+#hoja-presupuesto {
+  width: 210mm;
+  min-height: 297mm;
+  padding: 15mm;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header alineado correctamente */
+#hoja-presupuesto .pdf-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 2px solid #04448c;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+#hoja-presupuesto .pdf-logo {
+  height: 55px;
+  max-width: 240px;
+  object-fit: contain;
+  display: block;
+}
+
+#hoja-presupuesto .pdf-subtitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: #334155;
+  margin: 6px 0 2px 0;
+  letter-spacing: 0.5px;
+}
+
+/* Caja de datos de cliente y dirección */
+#hoja-presupuesto .pdf-client-box {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 10px 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+/* Tabla con bordes fijos y anchos de columna definidos */
+#hoja-presupuesto .pdf-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 16px;
+}
+
+#hoja-presupuesto .pdf-table th {
+  background-color: #04448c;
+  color: #ffffff;
+  text-align: left;
+  padding: 8px 10px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+#hoja-presupuesto .pdf-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 10px;
+  vertical-align: top;
+}
+
+/* Footer con total y condiciones */
+#hoja-presupuesto .pdf-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 2px solid #04448c;
+  padding-top: 12px;
+  margin-top: 16px;
+}
+
+#hoja-presupuesto .pdf-total-amount {
+  font-size: 22px;
+  font-weight: 800;
+  color: #04448c;
+  line-height: 1;
+  margin-top: 4px;
+}
+}
